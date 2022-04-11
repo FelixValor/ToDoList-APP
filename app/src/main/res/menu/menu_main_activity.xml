@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/chat_bluetooth"
+        android:title="Abrir Chat Bluetooth"
+        />
+    <item
+        android:id="@+id/item_map"
+        android:title="Abrir Mapa"
+        />
+    <item
+        android:id="@+id/item_contactame"
+        android:title="Soporte tecnico..."
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/item_contactame_email"
+                android:title="Email" />
+            <item
+                android:id="@+id/item_contactame_tlf"
+                android:title="Telefono" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/item_cerrar_sesion"
+        android:title="Cerrar sesion">
+    </item>
+    <item
+        android:id="@+id/item_buscar"
+        android:title="Buscar"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_search"
+        app:actionViewClass="android.widget.SearchView">
+    </item>
+</menu>

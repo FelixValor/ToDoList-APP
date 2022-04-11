@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.felixvalor.todolist">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Tareas"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ToDoList"
+        android:usesCleartextTraffic="true">
+
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyAKp7eUmnwZA3pz-phwbZA6P3kxHm3aNhA" />
+
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/AppTheme.PopMe"></activity>
+        <activity
+            android:name=".RegisterActivity"
+            android:theme="@style/AppTheme.PopMe"></activity>
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.PopMe"></activity>
+        <activity
+            android:name=".Task_PopActivity"
+            android:theme="@style/AppTheme.PopMe"></activity>
+        <activity
+            android:name=".ChatBluetoothActivity"
+            android:theme="@style/AppTheme.PopMe"></activity>
+        <activity
+            android:name=".MapActivity"
+            android:theme="@style/AppTheme.PopMe"></activity>
+        <receiver android:name=".Utils.ToDoListWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info" />
+        </receiver>
+    </application>
+
+</manifest>
